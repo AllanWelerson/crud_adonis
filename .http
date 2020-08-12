@@ -1,0 +1,48 @@
+
+POST http://localhost:3333/register HTTP/1.1
+content-type: application/json
+
+{
+  "username": "allan1",
+  "email": "allan1@email.com",
+  "password": "123456"
+}
+###
+
+POST http://127.0.0.1:3333/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "allan1@email.com",
+  "password": "123456"
+}
+###
+
+GET http://127.0.0.1:3333/app HTTP/1.1
+Content-Type: application/json
+###
+
+
+GET http://127.0.0.1:3333/tweets HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NzE5NjM1Nn0.y1Yhp0_GfzQ8MMKCTYATqq0oLG3KgQIKza32jp7yyro
+###
+
+POST http://127.0.0.1:3333/tweets HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NzE5NjM1Nn0.y1Yhp0_GfzQ8MMKCTYATqq0oLG3KgQIKza32jp7yyro
+
+{
+  "content": "Fala pessoal, primeiro tweet "
+}
+###
+
+GET http://127.0.0.1:3333/tweets/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NzE5NjM1Nn0.y1Yhp0_GfzQ8MMKCTYATqq0oLG3KgQIKza32jp7yyro
+###
+
+DELETE http://127.0.0.1:3333/tweets/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NzE5NjM1Nn0.y1Yhp0_GfzQ8MMKCTYATqq0oLG3KgQIKza32jp7yyro
+###
