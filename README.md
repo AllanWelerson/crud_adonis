@@ -1,3 +1,7 @@
+# CRUD em Adonis Seguindo tutorial de video da Rocketseat
+
+---
+
 # Adonis API application
 
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
